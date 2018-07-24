@@ -15,6 +15,7 @@ net-tools vim
 
 RUN echo "ServerSignature Off" >> /etc/apache2/apache2.conf
 RUN echo "ServerTokens Prod" >> /etc/apache2/apache2.conf
+RUN echo "Options -Indexes" >> /etc/apache2/apache2.conf
 
 RUN a2enmod rewrite
 RUN apache2ctl restart
