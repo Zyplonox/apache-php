@@ -15,9 +15,12 @@ net-tools vim
 
 RUN echo "ServerSignature Off" >> /etc/apache2/apache2.conf
 RUN echo "ServerTokens Prod" >> /etc/apache2/apache2.conf
-RUN echo "Options -Indexes" >> /etc/apache2/apache2.conf
+RUN echo "<Directory /var/www/html>" >> /etc/apache2/apache2.conf
+RUN echo "Options -indexes -Includes" >> /etc/apache2/apache2.conf 
+RUN echo "Order deny,allow" >> /etc/apache2/apache2.conf
+RUN echo "Allow from all" >> /etc/apache2/apache2.conf
+RUN echo "</Directory>" >> /etc/apache2/apache2.conf
 
 RUN a2enmod rewrite
-RUN apache2ctl restart
 
 CMD /usr/sbin/apache2ctl -D FOREGROUND
