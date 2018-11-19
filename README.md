@@ -5,7 +5,7 @@ A simple Apache2 Webserver with php7.2
 Timezone is Europe/Berlin
 
 Pre installed software:
-https://pastebin.com/7RZSyCjm
+https://pastebin.com/NzBxj1rR
 
 Apache mod 'rewrite' is on
 ServerSignature=Off
