@@ -4,6 +4,8 @@ A simple Apache2 Webserver with php7.2
 
 Timezone is Europe/Berlin
 
+http2 is active
+
 Pre installed software:
 https://pastebin.com/NzBxj1rR
 
