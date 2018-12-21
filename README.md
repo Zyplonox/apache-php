@@ -1,6 +1,6 @@
 # apache-php
 
-A simple Apache2 Webserver with php7.2
+Simple up to date Apache image with PHP
 
 Timezone is Europe/Berlin
 
@@ -14,4 +14,4 @@ ServerSignature=Off
 ServerTokens=Prod
 Directory Listing is disabled
 
-docker run -t -d -p 127.0.0.1:<target_port>:80 -v <source_webroot>:/var/www/html zyplonox/apache-php7.2
+docker run -t -d -p 127.0.0.1:<target_port>:80 -v <source_webroot>:/var/www/html zyplonox/apache-php
