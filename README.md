@@ -7,7 +7,7 @@ Timezone is Europe/Berlin
 http2 is active
 
 Pre installed software:
-https://pastebin.com/NzBxj1rR
+https://pastebin.com/Zu76hbDH
 
 Apache mod 'rewrite' is on
 ServerSignature=Off
