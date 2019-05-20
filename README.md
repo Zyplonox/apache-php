@@ -14,4 +14,4 @@ ServerSignature=Off
 ServerTokens=Prod
 Directory Listing is disabled
 
-docker run -t -d -p 127.0.0.1:<target_port>:80 -v <source_webroot>:/var/www/html zyplonox/apache-php
+docker run -t -d -p 127.0.0.1:\<target_port\>:80 -v \<source_webroot\>:/var/www/html zyplonox/apache-php
