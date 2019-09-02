@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM debian:buster-slim
   
 
 ENV TZ Europe/Berlin
