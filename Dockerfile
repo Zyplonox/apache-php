@@ -3,13 +3,9 @@ FROM debian:buster-slim
 ENV TZ Europe/Berlin
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+RUN apt update && apt upgrade -y
 
-RUN apt update && apt upgrade -y && apt install -y apache2 wget
-
-RUN apt install -y gnupg2 && wget https://packages.sury.org/php/apt.gpg && apt-key add apt.gpg
-RUN echo "deb https://packages.sury.org/php buster main" >> /etc/apt/sources.list && apt update
-
-RUN apt install -y php7.3 libapache2-mod-php7.3 \
+RUN apt install -y apache2 php7.3 libapache2-mod-php7.3 \
 php7.3-bcmath php7.3-bz2 php7.3-cgi php7.3-cli php7.3-common php7.3-curl php7.3-fpm php7.3-gd php7.3-xml \
 php7.3-json php7.3-ldap php7.3-mbstring php7.3-mysql php7.3-opcache php7.3-readline php7.3-sqlite3 php7.3-zip
 
