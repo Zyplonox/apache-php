@@ -1,6 +1,6 @@
 # apache-php
 
-Simple up to date Apache image with PHP
+Simple up to date Apache image with PHP 7.4
 
 Timezone is Europe/Berlin
 
