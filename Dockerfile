@@ -19,9 +19,8 @@ RUN echo "AllowOverride None" >> /etc/apache2/apache2.conf
 RUN echo "Require all denied" >> /etc/apache2/apache2.conf
 RUN echo "</Directory>" >> /etc/apache2/apache2.conf 
 RUN echo "<Directory /var/www/html>" >> /etc/apache2/apache2.conf
-RUN echo "Options -indexes -Includes" >> /etc/apache2/apache2.conf 
-RUN echo "Order deny,allow" >> /etc/apache2/apache2.conf
-RUN echo "Allow from all" >> /etc/apache2/apache2.conf
+RUN echo "Options -indexes +Includes +FollowSymLinks" >> /etc/apache2/apache2.conf 
+RUN echo "Require all granted" >> /etc/apache2/apache2.conf
 RUN echo "AllowOverride All" >> /etc/apache2/apache2.conf
 RUN echo "</Directory>" >> /etc/apache2/apache2.conf
 RUN echo "Protocols h2 h2c http/1.1" >> /etc/apache2/apache2.conf
@@ -32,4 +31,6 @@ RUN a2enmod rewrite
 
 WORKDIR /var/www/html
 
-CMD /usr/sbin/apache2ctl -D FOREGROUND
+EXPOSE 80
+
+CMD ["/usr/sbin/apache2ctl -D FOREGROUND"]
