@@ -24,6 +24,7 @@ RUN echo "Require all granted" >> /etc/apache2/apache2.conf
 RUN echo "AllowOverride All" >> /etc/apache2/apache2.conf
 RUN echo "</Directory>" >> /etc/apache2/apache2.conf
 RUN echo "Protocols h2 h2c http/1.1" >> /etc/apache2/apache2.conf
+RUN echo "Timeout 600" >> /etc/apache2/apache2.conf
 
 RUN a2disconf security
 
